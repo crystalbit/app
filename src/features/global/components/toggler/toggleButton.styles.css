@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: fit-content;
+  gap: 6px;
+}
+
+.container > p {
+  font-family: 'Play', sans-serif;
+  font-style: normal;
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  display: inline-block;
+  text-align: left;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 26px;
+  padding: 0;
+  line-height: 26px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.inner:before {
+  content: 'ON';
+  padding-left: 10px;
+  background-color: #3d4048;
+  color: #34ff61;
+  font-size: 12px;
+}
+
+.inner.inner-disabled:before {
+  background-color: #bbb;
+  color: white;
+}
+
+.inner:after {
+  content: 'OFF';
+  padding-right: 10px;
+  background-color: #34ff61;
+  color: black;
+  text-align: right;
+  font-size: 12px;
+}
+
+.inner.inner-disabled:after {
+  background-color: #bbb;
+  color: white;
+}
+
+.switch {
+  display: block;
+  width: 16px;
+  margin: 5px;
+  background: #34ff61;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 35px;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.checkbox:checked + .label .inner {
+  margin-left: 0;
+}
+
+.checkbox:checked + .label .switch {
+  right: 0;
+}
+
+.checkbox:not(:checked) + .label .switch {
+  background: black;
+}
+
+.flagTrueHorizontal {
+  flex-direction: row;
+}
+
+.flagFalseHorizontal {
+  flex-direction: column;
+}

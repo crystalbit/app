@@ -1,0 +1,51 @@
+.modern-radio-container {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-outer-circle {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  border: 2px solid #60e47d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  transition: all 0.1s linear;
+}
+
+.radio-inner-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #60e47d;
+  transition: all 0.1s linear;
+}
+
+.unselected {
+  border: 2px solid #ffffff;
+}
+.unselected-circle {
+  width: 0;
+  height: 0;
+}
+
+.helper-text {
+  color: #ffffff;
+  padding-right: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.helper-text > a {
+  color: #60e47d;
+}
+
+.helper-text-selected {
+  color: #60e47d;
+}

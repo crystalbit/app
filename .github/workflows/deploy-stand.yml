@@ -1,0 +1,96 @@
+name: Harmony Staging Deploy
+on: [push]
+
+env:
+  REACT_APP_MIXPANEL_TOKEN: $MIXPANEL
+  REACT_APP_BALANCE_CHECK_AVAILABLE: 1
+  TG_CHAT: -622708487
+
+jobs:
+  deploy:
+    if: "contains(github.event.head_commit.message, 'deploy/')"
+    name: Deploy to the staging server
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - if: "contains(github.event.head_commit.message, 'deploy/harmony')"
+        run: echo "REACT_APP_NETWORK=harmony" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'deploy/polygon')"
+        run: echo "REACT_APP_NETWORK=polygon" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'deploy/mumbai')"
+        run: echo "REACT_APP_NETWORK=mumbai" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'deploy/fuji')"
+        run: echo "REACT_APP_NETWORK=fuji" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'feet')"
+        run: echo "T_DOMAIN=feet" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'worm')"
+        run: echo "T_DOMAIN=worm" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'father')"
+        run: echo "T_DOMAIN=father" >> $GITHUB_ENV
+
+      - if: "contains(github.event.head_commit.message, 'clooney')"
+        run: echo "T_DOMAIN=clooney" >> $GITHUB_ENV
+
+      - name: ping in tg - start
+        run: wget "https://api.telegram.org/bot5432947618:AAHg2R7rkaUoMv8zf9YcShGVf9R12goRx8k/sendMessage?chat_id=${{ env.TG_CHAT }}&text=🚂 Start deploying <code>${GITHUB_REF#refs/heads/}</code> to <code>t-$T_DOMAIN</code> domain, <b>$REACT_APP_NETWORK</b> network by <i>${{ github.actor }}</i>&disable_notification=true&parse_mode=HTML"
+
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-modules-${{ hashFiles('**/package.json') }}
+
+      - if: steps.cache-npm.outputs.cache-hit != 'true'
+        run: npm install
+
+      - run: npm run build-ci
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ./deploy.key
+          sudo chmod 600 ./deploy.key
+          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+
+      - run: zip -r -q build-staging-${{ env.T_DOMAIN }}.zip build/
+      - run: scp build-staging-${{ env.T_DOMAIN }}.zip root@159.253.22.154:build-staging-${{ env.T_DOMAIN }}.zip
+      - run: ssh root@159.253.22.154 'rm -rf build'
+      - run: ssh root@159.253.22.154 'unzip -q build-staging-${{ env.T_DOMAIN }}.zip'
+      - run: ssh root@159.253.22.154 'rm -rf t-${{ env.T_DOMAIN }}'
+      - run: ssh root@159.253.22.154 'mv build t-${{ env.T_DOMAIN }}'
+
+      - name: ping in tg - finish
+        run: wget "https://api.telegram.org/bot5432947618:AAHg2R7rkaUoMv8zf9YcShGVf9R12goRx8k/sendMessage?chat_id=${{ env.TG_CHAT }}&text=🚂 ✅  https://t-$T_DOMAIN.marscolony.io deployed on <b>$REACT_APP_NETWORK</b> network by <i>${{ github.actor }}</i>&disable_notification=true&parse_mode=HTML"
+
+      - name: The job has failed
+        if: ${{ failure() }}
+        run: wget "https://api.telegram.org/bot5432947618:AAHg2R7rkaUoMv8zf9YcShGVf9R12goRx8k/sendMessage?chat_id=${{ env.TG_CHAT }}&text=🚂 ❌ https://t-$T_DOMAIN.marscolony.io FAILED on <b>$REACT_APP_NETWORK</b> network by <i>${{ github.actor }}</i>&disable_notification=true&parse_mode=HTML"

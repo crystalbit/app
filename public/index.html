@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Cache-Control" content="max-age=0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Mars Colony App</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      body::after {
+        content: '';
+        color: #fff;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        padding-top: 50px;
+        text-align: center;
+      }
+
+      div.root {
+        z-index: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="%PUBLIC_URL%/index.css?32" />
+    <link
+      rel="shortcut icon"
+      href="%PUBLIC_URL%/favicon.ico"
+      type="image/x-icon"
+    />
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TRKZWWG"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-202312084-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-202312084-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WDJK6BF');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- GLEAM -->
+    <script>
+      (function (d, t) {
+        var key = 'Bm7eO';
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = 'https://js.gleam.io/' + key + '/trk.js';
+        s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+
+    <script>
+      var Gleam = Gleam || [];
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WDJK6BF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>

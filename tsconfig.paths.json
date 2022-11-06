@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@features/*": ["features/*"],
+      "@avatars/*": ["features/avatars/*"],
+      "@global/*": ["features/global/*"],
+      "@redux/*": ["redux/*"],
+      "@selectors/*": ["redux/selectors/*"],
+      "@slices/*": ["redux/slices/*"],
+      "@root/*": ["./*"],
+      "@utils/*": ["utils/*"],
+      "@api/*": ["api/*"],
+      "@crypto/*": ["crypto/*"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@classes/*": ["classes/*"],
+      "@images/*": ["images/*"]
+    }
+  }
+}
