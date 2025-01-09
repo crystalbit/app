@@ -43,7 +43,7 @@
     "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-app-rewired --max_old_space_size=4096 build",
     "serve": "serve -s build -l 4000",
     "build-ci": "DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false react-app-rewired --max_old_space_size=4096 build",
-    "build-prod": "GENERATE_SOURCEMAP=false react-app-rewired --max_old_space_size=4096 build",
+    "build-prod": "export SET NODE_OPTIONS=--openssl-legacy-provider && GENERATE_SOURCEMAP=false react-app-rewired --max_old_space_size=4096 build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "prepare": "husky install"
