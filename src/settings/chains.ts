@@ -13,11 +13,13 @@ const HAR_CHAIN_ID = 1666600000;
 const MUMBAI_CHAIN_ID = 80001;
 const POLYGON_CHAIN_ID = 137;
 const FUJI_CHAIN_ID = 43113;
+const ZERO_TESTNET_CHAIN_ID = 4457845;
 type ChainId =
   | typeof HAR_CHAIN_ID
   | typeof POLYGON_CHAIN_ID
   | typeof MUMBAI_CHAIN_ID
-  | typeof FUJI_CHAIN_ID;
+  | typeof FUJI_CHAIN_ID
+  | typeof ZERO_TESTNET_CHAIN_ID;
 export const CURRENT_NET = NETWORK_DATA.ID as ChainId;
 const CHAIN_DATA: Record<ChainId, ChainData> = {
   [HAR_CHAIN_ID]: {
@@ -42,6 +44,12 @@ const CHAIN_DATA: Record<ChainId, ChainData> = {
     ticker: 'AVAX',
     name: 'Fuji chain',
     explorer: 'https://testnet.snowtrace.io',
+    x2: undefined
+  },
+  [ZERO_TESTNET_CHAIN_ID]: {
+    ticker: 'ETH',
+    name: 'Zero Testnet',
+    explorer: 'https://explorer.zerion.io/v1/zero-sepolia',
     x2: undefined
   }
 };

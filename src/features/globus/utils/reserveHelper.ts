@@ -2,7 +2,7 @@ import { NETWORK_DATA } from '@root/settings';
 import md5 from 'md5';
 
 const mumbai = NETWORK_DATA.ID === 80001;
-const DOMAIN = 'https://polygon-cart.marscolony.io';
+const DOMAIN = 'https://polygon-cart.router9.xyz';
 
 export const hash = (
   address: string,

@@ -537,7 +537,7 @@ export class MainMapScene extends Scene {
               this.cursorMarker.strokeRect(0, 0, 0, 0);
               const canvas = document.getElementsByTagName('canvas')[0];
               store.dispatch(setReplaceMode(false));
-              if (!canvas.style.cursor) {
+              if (!canvas?.style?.cursor) {
                 this.setCustomCursor();
               }
               this.replaceGhostObj = null;
@@ -557,7 +557,7 @@ export class MainMapScene extends Scene {
       this.cursorMarker.y = -1000000000000;
 
       const canvas = document.getElementsByTagName('canvas')[0];
-      if (!canvas.style.cursor) {
+      if (!canvas?.style?.cursor) {
         this.setCustomCursor();
       }
     }

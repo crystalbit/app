@@ -39,8 +39,8 @@
     "web3modal": "^1.9.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired --max_old_space_size=4096 build",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-app-rewired start",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-app-rewired --max_old_space_size=4096 build",
     "serve": "serve -s build -l 4000",
     "build-ci": "DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false react-app-rewired --max_old_space_size=4096 build",
     "build-prod": "GENERATE_SOURCEMAP=false react-app-rewired --max_old_space_size=4096 build",
@@ -93,5 +93,6 @@
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"
-  }
+  },
+  "packageManager": "yarn@4.3.1+sha512.af78262d7d125afbfeed740602ace8c5e4405cd7f4735c08feb327286b2fdb2390fbca01589bfd1f50b1240548b74806767f5a063c94b67e431aabd0d86f7774"
 }
