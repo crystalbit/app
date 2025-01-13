@@ -94,7 +94,7 @@ const LootboxPopupButton = styled.button`
   cursor: pointer;
   min-height: 50px;
   left: calc(50% - 365px / 2 + 8px);
-  background: #34ff61;
+  background: #fe5161;
   color: #36363d;
 
   ${fontProperty};

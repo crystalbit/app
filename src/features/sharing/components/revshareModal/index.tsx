@@ -58,7 +58,7 @@ export const RevshareModal = () => {
                   position: 'relative',
                   background: getTrackBackground({
                     values: [range as number],
-                    colors: ['#34FF61', '#000'],
+                    colors: ['#fe5161', '#000'],
                     min: 5,
                     max: 95,
                     rtl: false
@@ -75,7 +75,7 @@ export const RevshareModal = () => {
                   ...props.style,
                   height: '15px',
                   width: '15px',
-                  backgroundColor: '#34FF61',
+                  backgroundColor: '#fe5161',
                   borderRadius: '50%'
                 }}
               />

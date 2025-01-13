@@ -35,7 +35,7 @@ const CartContentTitle = styled.p`
   color: ${WHITE};
 
   span {
-    color: #34ff61;
+    color: #fe5161;
   }
 `;
 
@@ -44,7 +44,7 @@ const CartContentText = styled.p`
   font-size: 12px;
   line-height: 14px;
   text-align: center;
-  color: #34ff61;
+  color: #fe5161;
   cursor: pointer;
 `;
 
@@ -81,7 +81,7 @@ const SubtotalTitle = styled.div`
   color: #ffffff;
 
   span {
-    color: #34ff61;
+    color: #fe5161;
   }
 `;
 
@@ -116,7 +116,7 @@ export const CartContent = ({ itemsCount }: { itemsCount: number }) => {
     paddingRight: '44px',
     border: 'none',
     color: '#000000',
-    background: '#34FF61'
+    background: '#fe5161'
   };
 
   const onClearCart = () => {

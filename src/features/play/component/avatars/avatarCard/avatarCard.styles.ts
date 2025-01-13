@@ -11,7 +11,7 @@ const AvatarCardWrapper = styled.div<{
   height: 237px;
   min-height: 237px;
   border: ${({ isSelected }) =>
-    isSelected ? '1px solid #34FF61' : '1px solid rgba(255, 124, 37, 1)'};
+    isSelected ? '1px solid #fe5161' : '1px solid rgba(255, 124, 37, 1)'};
   box-sizing: border-box;
   position: relative;
   background-image: ${({ backgroundImg }) => `url(${backgroundImg})` ?? ''};
@@ -124,7 +124,7 @@ const AvatarStatsTopPanel = styled.div<{
     font-size: 10px;
     line-height: 10px;
     letter-spacing: -0.02em;
-    color: #34ff61;
+    color: #fe5161;
     opacity: 0.8;
   }
 

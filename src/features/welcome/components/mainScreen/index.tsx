@@ -54,9 +54,11 @@ export const MainScreen = () => {
               trackUserEvent('Play mission clicked', { address });
               navigate('/play/0');
             }}
-            text={isMissionsAvailable ? 'PLAY MISSION' : 'PLAY MISSION (Soon)'}
+            text={
+              isMissionsAvailable ? 'CREATE AI AGENT' : 'CREATE AI AGENT (Soon)'
+            }
             variant="common"
-            disabledText="PLAY MISSION (Soon)"
+            disabledText="CREATE AI AGENT (Soon)"
           />
         </WelcomeModalButtonsBlock>
       </WelcomeModalWrapper>

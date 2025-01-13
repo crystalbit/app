@@ -39,17 +39,17 @@ button {
   padding: 2px 6px;
   margin-top: 3px;
   margin-bottom: 10px;
-  color: rgba(52, 255, 97, 0.9);
+  color: #fe5161;
 }
 
 .mars_nav__connected_modal_link--claim {
-  color: rgba(52, 255, 97, 1);
+  color: #fe5161;
   margin-top: 5px;
   line-height: 40px;
 }
 
 .success {
-  color: #10ff00 !important;
+  color: #fe5161 !important;
   display: block;
   animation: accessAnimation 0.5s 2 0s linear;
 }
@@ -73,7 +73,7 @@ button {
 }
 
 .code-screen-source {
-  color: #2ad400;
+  color: #fe5161;
   font-size: 16px;
   line-height: 2;
 
@@ -632,7 +632,7 @@ button {
 
   /* Mars/Btn prmry */
 
-  background: #34ff61;
+  background: #fe5161;
 
   font-family: 'Play', sans-serif;
   font-style: normal;
@@ -655,7 +655,7 @@ button {
   height: 30px;
 
   background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #34ff61;
+  border: 2px solid #fe5161;
   font-family: 'Play';
   font-style: normal;
   font-weight: 700;
@@ -665,7 +665,7 @@ button {
 
   text-align: center;
 
-  color: #34ff61;
+  color: #fe5161;
   text-transform: uppercase;
   margin-top: 6px;
 }
@@ -727,7 +727,7 @@ button {
 
 .primitive-button {
   border: none !important;
-  background: #34ff61 !important;
+  background: #fe5161 !important;
   height: 50px !important;
   padding-left: 53px !important;
   padding-right: 53px !important;
@@ -741,7 +741,7 @@ button {
 
 .common-button-modification {
   border-radius: 0 !important;
-  background-color: #34ff61 !important;
+  background-color: #fe5161 !important;
   font-family: 'Play', sans-serif !important;
   font-style: normal !important;
   font-weight: 700 !important;

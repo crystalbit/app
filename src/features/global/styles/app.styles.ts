@@ -152,7 +152,7 @@ const MarsNavDisconnectButton = styled.button<{ isGamePage?: boolean }>`
         padding: 14px 50px 15px;
         width: 270px;
         height: 50px;
-        background: #34ff61;
+        background: #fe5161;
         font-weight: 700;
         font-size: 16px;
         line-height: 21px;
@@ -289,7 +289,7 @@ const NewHeaderInfoWrapper = styled.div`
 `;
 
 const NewHeaderAddressText = styled.div`
-  color: #34ff61;
+  color: #fe5161;
 `;
 
 const NewHeaderStatWrapper = styled.div`

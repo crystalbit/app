@@ -67,7 +67,7 @@ const AvatarsSelectBackButton = styled.span<{
   text-align: center;
   text-transform: uppercase;
 
-  color: #34ff61;
+  color: #fe5161;
   cursor: pointer;
   position: absolute;
   left: ${(props) => props.leftAvatarsBtn};
@@ -77,14 +77,14 @@ const AvatarsSelectBackButton = styled.span<{
 
   &:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-      drop-shadow(0px 0px 20px #34ff61);
+      drop-shadow(0px 0px 20px #fe5161);
   }
 `;
 
 const AvatarsSelectGhostButton = styled.button<{
   Top?: string;
 }>`
-  border: 2px solid #34ff61;
+  border: 2px solid #fe5161;
   box-sizing: border-box;
 
   ${fontProperty};
@@ -99,12 +99,12 @@ const AvatarsSelectGhostButton = styled.button<{
   text-align: center;
   letter-spacing: -0.02em;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 0px 20px #34ff61);
-  color: #34ff61;
+    drop-shadow(0px 0px 20px #fe5161);
+  color: #fe5161;
 
   &:hover {
     filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.2))
-      drop-shadow(0px 0px 15px #34ff61);
+      drop-shadow(0px 0px 15px #fe5161);
   }
 
   &:disabled {
@@ -163,7 +163,7 @@ const CryochamberStatsWrapper = styled.div`
     font-weight: 400;
     font-size: 10px;
     color: black;
-    background-color: #34ff61;
+    background-color: #fe5161;
     padding-bottom: 2px;
     padding-top: 2px;
     border-top-right-radius: 3px;
@@ -173,7 +173,7 @@ const CryochamberStatsWrapper = styled.div`
   span {
     font-weight: 700;
     font-size: 52px;
-    color: #34ff61;
+    color: #fe5161;
   }
 `;
 
@@ -267,7 +267,7 @@ const CryochamberUIMobile = styled.div<{ isBlurred?: boolean }>`
 
   font-weight: 700;
   font-size: 52px;
-  color: #34ff61;
+  color: #fe5161;
   span {
     position: relative;
     top: 6px;

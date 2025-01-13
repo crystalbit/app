@@ -53,7 +53,7 @@ const CryochamberStatsWrapper = styled.div`
     font-weight: 400;
     font-size: 10px;
     color: black;
-    background-color: #34ff61;
+    background-color: #fe5161;
     padding-bottom: 2px;
     padding-top: 2px;
     border-top-right-radius: 3px;
@@ -63,7 +63,7 @@ const CryochamberStatsWrapper = styled.div`
   span {
     font-weight: 700;
     font-size: 52px;
-    color: #34ff61;
+    color: #fe5161;
   }
 
   @media (max-width: 600px) {
@@ -174,7 +174,7 @@ const CryochamberUIMobile = styled.div<{ isBlurred?: boolean }>`
 
   font-weight: 700;
   font-size: 52px;
-  color: #34ff61;
+  color: #fe5161;
   span {
     position: relative;
     top: 6px;

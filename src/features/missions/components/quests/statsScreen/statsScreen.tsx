@@ -108,7 +108,7 @@ export const StatsScreen = () => {
               additionalStyles={{ position: 'relative', top: '-6px' }}
             />
             <div className="mt-20">
-              <QuestsTitle text="Rewards" bgColor="#34FF61" textColor="black" />
+              <QuestsTitle text="Rewards" bgColor="#fe5161" textColor="black" />
             </div>
             <QuestAdditionalText
               text={

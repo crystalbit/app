@@ -235,7 +235,7 @@ const SimpleTextWrapper = styled.div`
 `;
 
 const CopyInputWrapper = styled.div`
-  border: 1px solid #34ff61;
+  border: 1px solid #fe5161;
   background: rgba(0, 0, 0, 0.5);
   font-family: 'Helvetica', sans-serif;
   font-style: normal;
@@ -271,7 +271,7 @@ const CopyInputWrapper = styled.div`
     line-height: 10px;
     letter-spacing: -0.02em;
     cursor: pointer;
-    color: #34ff61;
+    color: #fe5161;
   }
 `;
 
@@ -286,7 +286,7 @@ const TwitterText = styled.p`
 
   span {
     cursor: pointer;
-    color: #34ff61;
+    color: #fe5161;
   }
 `;
 

@@ -29,7 +29,7 @@ const StyledCommonButton = styled.button<{ isGhost?: boolean }>`
 
   &:not([disabled]):hover {
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
-      drop-shadow(0px 0px 20px #34ff61);
+      drop-shadow(0px 0px 20px #fe5161);
   }
 
   &:disabled {
@@ -40,7 +40,7 @@ const StyledCommonButton = styled.button<{ isGhost?: boolean }>`
   ${({ isGhost }) => {
     if (isGhost) {
       return css`
-        color: #34ff61;
+        color: #fe5161;
         font-weight: 400;
         font-size: 18px;
         line-height: 21px;
@@ -58,7 +58,7 @@ const StyledCommonButton = styled.button<{ isGhost?: boolean }>`
         color: #36363d;
         line-height: 30px;
         width: 100%;
-        background: #34ff61;
+        background: #fe5161;
         font-family: 'Play', sans-serif;
 
         &:disabled {

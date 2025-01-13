@@ -16,9 +16,9 @@ const EnhButtonWrapper = styled.button<{ isGamePage?: boolean }>`
   position: relative;
 
   &:not([disabled]):hover {
-    color: #34ff61;
+    color: #fe5161;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-      drop-shadow(0px 0px 20px #34ff61);
+      drop-shadow(0px 0px 20px #fe5161);
   }
 
   &:disabled {
@@ -50,7 +50,7 @@ const EnhButtonWrapper = styled.button<{ isGamePage?: boolean }>`
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
         .enh_button__get {
-          color: #34ff61;
+          color: #fe5161;
         }
 
         &:not([disabled]):hover {

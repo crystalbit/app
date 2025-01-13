@@ -22,7 +22,7 @@ const LootboxCardWrapper = styled.div<{
   }}
   cursor: pointer;
   &:hover {
-    border: 0.5px solid #34ff61;
+    border: 0.5px solid #fe5161;
   }
 `;
 

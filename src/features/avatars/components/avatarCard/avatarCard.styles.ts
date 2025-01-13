@@ -11,7 +11,7 @@ const AvatarCardWrapper = styled.div<{
   height: 236px;
   min-height: 236px;
   border: ${({ isSelected }) =>
-    isSelected ? '1px solid #34FF61' : '1px solid rgba(255, 124, 37, 1)'};
+    isSelected ? '1px solid #fe5161' : '1px solid rgba(255, 124, 37, 1)'};
   box-sizing: border-box;
   position: relative;
   background-image: ${({ backgroundImg }) => `url(${backgroundImg})` ?? ''};
@@ -35,7 +35,7 @@ const AvatarStats = styled.div`
   font-size: 10px;
   line-height: 11px;
   letter-spacing: -0.01em;
-  color: #34ff61;
+  color: #fe5161;
 `;
 
 const AvatarMetaBlock = styled.div`
@@ -133,7 +133,7 @@ const MissionsCounterWrapper = styled.div<{
   height: 22px;
   display: grid;
   place-items: center;
-  background-color: #34ff61;
+  background-color: #fe5161;
   color: black;
   border-radius: ${({ borderRadius }) => borderRadius ?? '50%'};
 
@@ -150,7 +150,7 @@ const MissionsCounterWrapper = styled.div<{
         padding-left: 10px;
         padding-right: 10px;
         border-radius: 300px;
-        background-color: ${isDisabled ? '#c4c4c4' : '#34ff61'};
+        background-color: ${isDisabled ? '#c4c4c4' : '#fe5161'};
 
         span {
           position: relative;
@@ -202,7 +202,7 @@ const AvatarStatsTopPanel = styled.div<{
     font-size: 10px;
     line-height: 10px;
     letter-spacing: -0.02em;
-    color: #34ff61;
+    color: #fe5161;
     opacity: 0.8;
   }
 

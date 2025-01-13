@@ -27,6 +27,7 @@ import {
 } from '@global/styles/app.styles';
 import MarsIconImg from '@images/photo/connection-zone-icons/MarsIcon.png';
 import OneIconImg from '@images/photo/connection-zone-icons/OneIcon.png';
+import EthIconImg from '@images/photo/connection-zone-icons/eth.png';
 import PolygonIconImg from '@images/photo/connection-zone-icons/PolygonIcon.png';
 import { Copy } from '@root/images/icons/Copy';
 import { ImageIconWrapper } from '@root/images/icons/imageIconWrapper';
@@ -143,7 +144,7 @@ export const ConnectionZone = ({
           <NewHeaderStatWrapper>
             <ImageIconWrapper
               src={
-                CURRENT_CHAIN.ticker === 'MATIC' ? PolygonIconImg : OneIconImg
+                CURRENT_CHAIN.ticker === 'MATIC' ? PolygonIconImg : EthIconImg
               }
               dimension="14px"
             />

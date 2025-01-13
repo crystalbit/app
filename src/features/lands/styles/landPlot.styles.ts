@@ -153,8 +153,8 @@ const LandPlotEarnedButton = styled.button<{
 }>`
   display: block;
   width: ${({ Width }) => Width ?? '100%'};
-  background: #34ff61;
-  border: 4px solid #34ff61;
+  background: #fe5161;
+  border: 4px solid #fe5161;
   box-sizing: border-box;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   ${fontProperty};
@@ -184,7 +184,7 @@ const LandPlotEarnedButton = styled.button<{
 
   &:not([disabled]):hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-      drop-shadow(0px 0px 20px #34ff61);
+      drop-shadow(0px 0px 20px #fe5161);
   }
 
   ${({ isNewBuild }) => {
@@ -197,7 +197,7 @@ const LandPlotEarnedButton = styled.button<{
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
         .enh_button__get {
-          color: #34ff61;
+          color: #fe5161;
         }
 
         &:disabled {
@@ -327,8 +327,8 @@ const GamePageDetailedButton = styled.div`
   button {
     height: 30px;
     margin-top: 0;
-    background: #34ff61;
-    border: 2px solid #34ff61;
+    background: #fe5161;
+    border: 2px solid #fe5161;
   }
 `;
 

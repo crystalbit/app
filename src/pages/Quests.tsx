@@ -50,9 +50,9 @@ import mixpanel from 'mixpanel-browser';
 import QuestsUIScreen from '../images/photo/quests/mission-panel/missionsMainPanel.png';
 
 const customButtonStyles: CSSProperties = {
-  border: '2px solid #34FF61',
+  border: '2px solid #fe5161',
   background: 'black',
-  color: '#34FF61',
+  color: '#fe5161',
   fontSize: '12px',
   minWidth: '190px',
   boxSizing: 'border-box'

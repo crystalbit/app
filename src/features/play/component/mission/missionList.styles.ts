@@ -132,7 +132,7 @@ const List = styled.div<{
   line-height: 16px;
 
   opacity: ${({ isActive }) => (isActive ? 1 : 0.6)};
-  color: ${({ isHighlighted }) => (isHighlighted ? '#34FF61' : '')};
+  color: ${({ isHighlighted }) => (isHighlighted ? '#fe5161' : '')};
   background: ${({ isHighlighted }) => (isHighlighted ? '#21232B' : 'unset')};
 
   &:hover {
@@ -155,7 +155,7 @@ const PlayButton = styled.button<{
   height: 30px;
 
   background: ${({ countMis }) =>
-    countMis !== 0 ? '#34FF61' : 'rgba(151, 151, 151, 0.8)'};
+    countMis !== 0 ? '#fe5161' : 'rgba(151, 151, 151, 0.8)'};
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -260,7 +260,7 @@ const MissionBlockChallenge = styled.div<{
   height: 144px;
 
   background: #21232b;
-  border: 1px solid #34ff61;
+  border: 1px solid #fe5161;
   border-radius: 4px;
 `;
 
@@ -287,7 +287,7 @@ const Content = styled.div`
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  color: #34ff61;
+  color: #fe5161;
 `;
 
 const Text = styled.p``;

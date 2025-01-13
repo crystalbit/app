@@ -2,8 +2,8 @@ import React from 'react';
 
 export const LandPinIcon = ({
   className,
-  fill = '#34FF61',
-  stroke = '#34FF61'
+  fill = '#fe5161',
+  stroke = '#fe5161'
 }: {
   className?: string;
   fill?: string;

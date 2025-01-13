@@ -390,7 +390,9 @@ export const OpenGlobus = ({ height, allTokens, myTokens }: Props) => {
   React.useEffect(() => {
     const osm = new layer.XYZ('Mars', {
       isBaseLayer: true,
-      url: 'https://{s}-polygon-tiles.marscolony.io/tiles/{z}/{x}/{y}.png',
+      // url: 'https://{s}-polygon-tiles.marscolony.io/tiles/{z}/{x}/{y}.png',
+      // url: 'https://{s}-tiles.router9.xyz/tile/{z}/{x}/{y}.png',
+      url: 'https://terrain.openglobus.org/mars/sat/{z}/{x}/{y}.png',
       // visibility: true,
       maxNativeZoom: 8
     });

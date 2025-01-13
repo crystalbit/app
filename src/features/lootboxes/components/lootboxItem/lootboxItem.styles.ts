@@ -21,7 +21,7 @@ const LootboxCardWrapper = styled.div<{
   }}
   cursor: pointer;
   &:hover {
-    border: 1px solid #34ff61;
+    border: 1px solid #fe5161;
   }
 `;
 
@@ -32,7 +32,7 @@ const LootboxCardButtonWrapper = styled.div`
 
   button {
     height: 30px;
-    background: #34ff61;
+    background: #fe5161;
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;

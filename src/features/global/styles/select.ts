@@ -7,7 +7,7 @@ export const customStylesSelect = {
     boxShadow: state.isFocused ? null : null,
     width: '100%',
     '&:hover': {
-      borderColor: state.isFocused ? '#34ff61' : '#fff'
+      borderColor: state.isFocused ? '#fe5161' : '#fff'
     }
   }),
   placeholder: (base: any) => ({

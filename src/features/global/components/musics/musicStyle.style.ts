@@ -46,13 +46,13 @@ const MusicSlider = styled.input`
   height: 4px;
   border-radius: 7px;
   background: ${(props) =>
-    `linear-gradient(to right, #34FF61 0%, #34FF61 ${props.value}%, #2E2E34 ${props.value}%, #2E2E34 100%);`};
+    `linear-gradient(to right, #fe5161 0%, #fe5161 ${props.value}%, #2E2E34 ${props.value}%, #2E2E34 100%);`};
 
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background: #34ff61;
+    background: #fe5161;
     border-radius: 7px;
     border: none;
     box-shadow: none;
@@ -106,7 +106,7 @@ const AttrLink = styled.a`
   font-weight: 400;
   font-size: 12px;
 
-  color: #34ff61;
+  color: #fe5161;
 `;
 
 const AudioComponent = styled.audio``;

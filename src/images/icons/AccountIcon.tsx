@@ -9,10 +9,10 @@ export const AccountIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="9.5" cy="5.5" r="5" stroke="#34FF61" />
+      <circle cx="9.5" cy="5.5" r="5" stroke="#fe5161" />
       <path
         d="M19 22C19 17.0294 14.9706 13 10 13C5.02944 13 1 17.0294 1 22"
-        stroke="#34FF61"
+        stroke="#fe5161"
       />
     </svg>
   );

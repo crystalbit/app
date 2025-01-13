@@ -11,7 +11,7 @@ const NavbarBackButton = styled.button<{ dimension?: string }>`
   display: flex;
   align-items: center;
   margin-right: 40px;
-  background-color: #34ff61;
+  background-color: #fe5161;
   padding: 9px;
 
   text-transform: uppercase;
@@ -21,7 +21,7 @@ const NavbarBackButton = styled.button<{ dimension?: string }>`
 
   &:not([disabled]):hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-      drop-shadow(0px 0px 20px #34ff61);
+      drop-shadow(0px 0px 20px #fe5161);
   }
 
   ${({ dimension }) => {
@@ -85,7 +85,7 @@ const CartCloseIconWrapper = styled.div`
 
 const CartIconCounter = styled.div`
   border-radius: 50%;
-  background: #34ff61;
+  background: #fe5161;
   color: black;
   display: grid;
   align-items: center;
@@ -116,7 +116,7 @@ const RevenuButtonWrapper = styled.div`
     font-size: 10px;
     line-height: 10px;
     letter-spacing: -0.02em;
-    color: #34ff61;
+    color: #fe5161;
     background: ${LIGHT_GRAY};
     border-radius: 4px;
   }

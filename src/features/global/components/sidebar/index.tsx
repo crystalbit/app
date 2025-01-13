@@ -159,17 +159,17 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
         name: SIDEBAR_ROUTES_NAMES.home,
         trackEvent: 'Home page clicked'
       },
-      {
-        route: '/profile/',
-        onClick: () => {
-          return navigate('/profile/0');
-        },
-        icon: ProfileIcons,
-        isActive: true,
-        withCounter: false,
-        count: 0,
-        name: SIDEBAR_ROUTES_NAMES.profile
-      },
+      // {
+      //   route: '/profile/',
+      //   onClick: () => {
+      //     return navigate('/profile/0');
+      //   },
+      //   icon: ProfileIcons,
+      //   isActive: true,
+      //   withCounter: false,
+      //   count: 0,
+      //   name: SIDEBAR_ROUTES_NAMES.profile
+      // },
       {
         route: '/lands',
         onClick: () => {
@@ -187,43 +187,43 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
         name: SIDEBAR_ROUTES_NAMES.lands,
         trackEvent: 'Lands page clicked'
       },
-      {
-        route: '/play/',
-        onClick: () => {
-          return navigate('/play/0');
-        },
-        icon: PlayIcon,
-        isActive: isPlaySection,
-        withCounter: isMissionsAvailable,
-        count: availableMissionsCount as number,
-        name: SIDEBAR_ROUTES_NAMES.play,
-        trackEvent: 'Play page clicked'
-      },
+      // {
+      //   route: '/play/',
+      //   onClick: () => {
+      //     return navigate('/play/0');
+      //   },
+      //   icon: PlayIcon,
+      //   isActive: isPlaySection,
+      //   withCounter: isMissionsAvailable,
+      //   count: availableMissionsCount as number,
+      //   name: SIDEBAR_ROUTES_NAMES.play,
+      //   trackEvent: 'Play page clicked'
+      // },
       {
         route: '/xchange',
         icon: DexIcon,
         isActive: isChangePageAvailable,
         withCounter: false,
         count: 0,
-        name: SIDEBAR_ROUTES_NAMES.dex,
+        name: SIDEBAR_ROUTES_NAMES.aiTrade,
         trackEvent: 'DEX page clicked (harmony only)'
       },
-      {
-        route: '/governance',
-        icon: GovernanceIcon,
-        isActive: true,
-        withCounter: false,
-        count: 0,
-        name: SIDEBAR_ROUTES_NAMES.governance,
-        onClick: () => {
-          if (isHarmonyChains) {
-            window.open(LINKS.harmony.governance, '_blank');
-          } else {
-            window.open(LINKS.polygon.governance, '_blank');
-          }
-        },
-        trackEvent: 'Governance page clicked'
-      },
+      // {
+      //   route: '/governance',
+      //   icon: GovernanceIcon,
+      //   isActive: true,
+      //   withCounter: false,
+      //   count: 0,
+      //   name: SIDEBAR_ROUTES_NAMES.governance,
+      //   onClick: () => {
+      //     if (isHarmonyChains) {
+      //       window.open(LINKS.harmony.governance, '_blank');
+      //     } else {
+      //       window.open(LINKS.polygon.governance, '_blank');
+      //     }
+      //   },
+      //   trackEvent: 'Governance page clicked'
+      // },
       {
         route: '/referral',
         icon: ReferralIcon,
@@ -232,16 +232,16 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
         count: 0,
         name: SIDEBAR_ROUTES_NAMES.referral,
         trackEvent: 'Referral page clicked'
-      },
-      {
-        route: '/market',
-        icon: MarketIcon,
-        isActive: false,
-        withCounter: false,
-        count: 0,
-        name: SIDEBAR_ROUTES_NAMES.market,
-        trackEvent: 'Market page clicked'
       }
+      // {
+      //   route: '/market',
+      //   icon: MarketIcon,
+      //   isActive: false,
+      //   withCounter: false,
+      //   count: 0,
+      //   name: SIDEBAR_ROUTES_NAMES.market,
+      //   trackEvent: 'Market page clicked'
+      // }
     ];
   }, [
     isHarmonyChains,

@@ -109,7 +109,7 @@ const RevshareActionButton = styled.button`
   height: 30px;
   border: none;
   color: ${BLACK};
-  background: #34ff61;
+  background: #fe5161;
   margin-bottom: 40px;
   max-width: 114px;
   display: flex;

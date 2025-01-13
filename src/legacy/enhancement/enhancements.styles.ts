@@ -32,7 +32,7 @@ const EnhAux = styled.div`
   line-height: 12px;
   text-transform: uppercase;
   padding: 2px;
-  color: #34ff61;
+  color: #fe5161;
 `;
 
 const EnhImageWrapper = styled.div<{ minified?: boolean; isActive?: boolean }>`
@@ -40,7 +40,7 @@ const EnhImageWrapper = styled.div<{ minified?: boolean; isActive?: boolean }>`
     if (minified) {
       return css`
         * {
-          fill: ${isActive ? '#34ff61' : 'white'};
+          fill: ${isActive ? '#fe5161' : 'white'};
         }
 
         svg {
@@ -53,7 +53,7 @@ const EnhImageWrapper = styled.div<{ minified?: boolean; isActive?: boolean }>`
     if (!minified) {
       return css`
         * {
-          fill: ${isActive ? '#34ff61' : 'white'};
+          fill: ${isActive ? '#fe5161' : 'white'};
         }
 
         svg {
@@ -126,7 +126,7 @@ const CounterBlock = styled.div<{ isActive?: boolean }>`
   ${({ isActive }) => {
     if (isActive) {
       return css`
-        background-color: #34ff61;
+        background-color: #fe5161;
       `;
     }
   }}

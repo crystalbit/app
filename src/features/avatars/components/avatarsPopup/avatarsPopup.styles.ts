@@ -207,7 +207,7 @@ const AvatarImageBody = styled.div<{ src?: string }>`
   max-width: inherit;
   min-width: 250px;
   width: 100%;
-  border: 1px solid #34ff61;
+  border: 1px solid #fe5161;
   box-sizing: border-box;
   filter: drop-shadow(0px 0px 400px #ffffff);
 
@@ -239,7 +239,7 @@ const AvatarImageBody = styled.div<{ src?: string }>`
 
   a {
     text-decoration: underline;
-    color: #34ff61;
+    color: #fe5161;
   }
 `;
 
@@ -264,7 +264,7 @@ const LevelCounterWrapper = styled.div`
   line-height: 11px;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #34ff61;
+  color: #fe5161;
 `;
 
 const AvatarsNickInputWrapper = styled.div`
@@ -282,7 +282,7 @@ const AvatarsNickInput = styled.input`
   width: 100%;
   height: 37px;
   border: 1px solid;
-  border-image-source: linear-gradient(90deg, #34ff61 -3.55%, #0ed7b3 107.42%);
+  border-image-source: linear-gradient(90deg, #fe5161 -3.55%, #0ed7b3 107.42%);
   border-image-slice: 1;
 
   outline: none;
@@ -302,7 +302,7 @@ const AvatarInputTitle = styled.span`
   font-weight: 400;
   font-size: 12px;
 
-  color: #34ff61;
+  color: #fe5161;
   opacity: 0.8;
   margin-bottom: 5px;
 `;
@@ -331,7 +331,7 @@ const CompactAvatarUIWrapper = styled.div<{
   bottom: 20px;
   width: 200px;
   height: 200px;
-  border: 1px solid #34ff61;
+  border: 1px solid #fe5161;
   border-bottom: none;
   box-sizing: border-box;
   display: flex;
@@ -349,8 +349,8 @@ const CompactAvatarUIWrapper = styled.div<{
     if (isGamePage) {
       return css`
         left: 30px;
-        border: 1px solid #34ff61;
-        filter: drop-shadow(0px 0px 200px #34ff61);
+        border: 1px solid #fe5161;
+        filter: drop-shadow(0px 0px 200px #fe5161);
 
         svg {
           z-index: 100;
@@ -413,7 +413,7 @@ const Rename = styled.button<{ left?: string }>`
   font-family: 'Play', sans-serif;
   font-size: 10px;
   line-height: 10px;
-  color: #34ff61;
+  color: #fe5161;
   position: absolute;
   text-decoration: none;
   top: 165px;
@@ -528,7 +528,7 @@ const NameAvatarButton = styled.p<{ extraBottom?: string }>`
   line-height: 10px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #34ff61;
+  color: #fe5161;
   opacity: 0.8;
   position: absolute;
   bottom: ${(props) => (props.extraBottom ? props.extraBottom : '15px')};

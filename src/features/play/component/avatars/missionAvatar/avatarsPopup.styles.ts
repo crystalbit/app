@@ -28,8 +28,8 @@ const CompactAvatarUIWrapper = styled.div<{
     if (isGamePage) {
       return css`
         left: 30px;
-        border: 1px solid #34ff61;
-        filter: drop-shadow(0px 0px 200px #34ff61);
+        border: 1px solid #fe5161;
+        filter: drop-shadow(0px 0px 200px #fe5161);
 
         svg {
           z-index: 100;

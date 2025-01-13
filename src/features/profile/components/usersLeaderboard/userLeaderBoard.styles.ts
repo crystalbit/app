@@ -60,11 +60,11 @@ export const AttributesText = styled.p<{
   flag?: boolean;
 }>`
   box-sizing: border-box;
-  border: 0.5px solid ${({ flag }) => (flag ? '#34FF61' : WHITE)};
+  border: 0.5px solid ${({ flag }) => (flag ? '#fe5161' : WHITE)};
   border-radius: 4px;
 
   padding: 4px 10px;
-  color: ${({ flag }) => (flag ? '#34FF61' : WHITE)};
+  color: ${({ flag }) => (flag ? '#fe5161' : WHITE)};
 
   margin: 0;
 `;

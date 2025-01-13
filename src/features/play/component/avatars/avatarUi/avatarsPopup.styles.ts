@@ -29,8 +29,8 @@ const CompactAvatarUIWrapper = styled.div<{
     if (isGamePage) {
       return css`
         left: 30px;
-        border: 1px solid #34ff61;
-        filter: drop-shadow(0px 0px 200px #34ff61);
+        border: 1px solid #fe5161;
+        filter: drop-shadow(0px 0px 200px #fe5161);
 
         svg {
           z-index: 100;
@@ -114,7 +114,7 @@ const Rename = styled.button<{ left?: string }>`
   ${fontProperty};
   font-size: 10px;
   line-height: 10px;
-  color: #34ff61;
+  color: #fe5161;
   position: absolute;
   text-decoration: none;
   top: 165px;
@@ -154,7 +154,7 @@ const AvatarMintButton = styled.button<{
   font-size: 12px;
   position: relative;
   bottom: -200px;
-  background: #34ff61;
+  background: #fe5161;
   outline: none;
   border: none;
   cursor: pointer;

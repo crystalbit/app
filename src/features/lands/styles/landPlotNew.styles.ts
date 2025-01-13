@@ -67,7 +67,7 @@ const LandPlotNewIconWrapper = styled.div`
           fill: ${TOXIC_GREEN};
         }
       }
-      filter: drop-shadow(0px 0px 10px #34ff61);
+      filter: drop-shadow(0px 0px 10px #fe5161);
     }
   }
 

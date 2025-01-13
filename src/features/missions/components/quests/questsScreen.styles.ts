@@ -241,7 +241,7 @@ const GreenQuestButtonText = styled.p<{
         color: #000000;
         mix-blend-mode: overlay;
         opacity: 0.8;
-        text-shadow: 0 0 10px #34ff61;
+        text-shadow: 0 0 10px #fe5161;
         font-size: 18px;
         left: 27%;
         top: 32%;
@@ -254,7 +254,7 @@ const GreenQuestButtonText = styled.p<{
         color: #000000;
         mix-blend-mode: overlay;
         opacity: 0.8;
-        text-shadow: 0 0 10px #34ff61;
+        text-shadow: 0 0 10px #fe5161;
         font-size: 18px;
         left: 30%;
         top: 32%;
@@ -275,9 +275,9 @@ const GreenQuestButtonText = styled.p<{
 
     if (color === 'green') {
       return css`
-        color: #34ff61;
+        color: #fe5161;
         mix-blend-mode: normal;
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 0 20px #34ff61;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 0 20px #fe5161;
       `;
     }
 
@@ -293,7 +293,7 @@ const RewardButton = styled.div`
   padding: 3px 6px;
   width: 108px;
   height: 19px;
-  background: #34ff61;
+  background: #fe5161;
   border-radius: 2px;
 
   ${fontProperty};

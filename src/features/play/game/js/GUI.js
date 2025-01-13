@@ -51,7 +51,7 @@ export default class GUI extends Phaser.GameObjects.Container {
       .rexBBCodeText(80, 90, `${MAX_MOVES_LIMIT()}/${MAX_MOVES_LIMIT()}`, {
         fontFamily: 'Play',
         fontSize: 26,
-        color: '#34FF61'
+        color: '#fe5161'
       })
       .setOrigin(0.5)
       .setHAlign('center')
@@ -70,7 +70,7 @@ export default class GUI extends Phaser.GameObjects.Container {
       .rexBBCodeText(230, 90, '20:00', {
         fontFamily: 'Play',
         fontSize: 26,
-        color: '#34FF61'
+        color: '#fe5161'
       })
       .setOrigin(0.5)
       .setHAlign('center')
@@ -89,7 +89,7 @@ export default class GUI extends Phaser.GameObjects.Container {
       .rexBBCodeText(360, 90, MAX_DYNAMITES_LIMIT(), {
         fontFamily: 'Play',
         fontSize: 26,
-        color: '#34FF61'
+        color: '#fe5161'
       })
       .setOrigin(0.5)
       .setHAlign('center')
@@ -108,7 +108,7 @@ export default class GUI extends Phaser.GameObjects.Container {
       .rexBBCodeText(500, 90, '0/0/0', {
         fontFamily: 'Play',
         fontSize: 26,
-        color: '#34FF61'
+        color: '#fe5161'
       })
       .setOrigin(0.5)
       .setHAlign('center')
@@ -200,7 +200,7 @@ export default class GUI extends Phaser.GameObjects.Container {
         this.scene.game.sizeW / 2,
         this.scene.game.sizeH - 40,
         'THERE ARE 3 RESOURCES\nIN THE HIGHLIGHTED AREA',
-        { font: '18px Play', fill: '#34FF61', align: 'center' }
+        { font: '18px Play', fill: '#fe5161', align: 'center' }
       )
       .setOrigin(0.5)
       .setResolution(2)
@@ -493,7 +493,7 @@ export default class GUI extends Phaser.GameObjects.Container {
         this.return_txt = this.scene.add
           .text(-100, 220, 'RETURN TO MISSION', {
             font: '16px Play',
-            fill: '#34FF61',
+            fill: '#fe5161',
             align: 'center'
           })
           .setOrigin(0.5)
@@ -747,7 +747,7 @@ export default class GUI extends Phaser.GameObjects.Container {
         this.return_txt = this.scene.add
           .text(-100, 180 + 20, 'EXIT', {
             font: '16px Play',
-            fill: '#34FF61',
+            fill: '#fe5161',
             align: 'center'
           })
           .setOrigin(0.5)
@@ -796,7 +796,7 @@ export default class GUI extends Phaser.GameObjects.Container {
           .setPosition(-40, -15);
         this.resline2 = this.scene.add.graphics();
         this.resline2
-          .fillStyle(0x34ff61, 1)
+          .fillStyle(0xfe5161, 1)
           .fillRect(0, 0, 220 * res_ganted, 4)
           .setPosition(-40, -15);
 
@@ -817,7 +817,7 @@ export default class GUI extends Phaser.GameObjects.Container {
           .setPosition(-362, 138);
         this.transline3 = this.scene.add.graphics();
         this.transline3
-          .fillStyle(0x34ff61, 1)
+          .fillStyle(0xfe5161, 1)
           .fillRect(
             0,
             0,
@@ -948,7 +948,7 @@ export default class GUI extends Phaser.GameObjects.Container {
         this.return_txt = this.scene.add
           .text(-100, 230, 'EXIT', {
             font: '16px Play',
-            fill: '#34FF61',
+            fill: '#fe5161',
             align: 'center'
           })
           .setOrigin(0.5)
