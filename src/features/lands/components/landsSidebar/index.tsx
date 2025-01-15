@@ -46,6 +46,7 @@ import {
   toggleMyLandPopup
 } from '@slices/appPartsSlice';
 import { deleteItemFromChart, toggleCartSidebar } from '@slices/cartSlice';
+import { StatsBar } from '@features/global/components/statsBar';
 
 import {
   ActiveLandsControlWrapper,
@@ -143,6 +144,7 @@ export const NoLandsSidebarView = () => {
 
   return (
     <LandsSidebarHeaderWrapper>
+      <StatsBar />
       <NoLandsTitle>
         {isLoadingTokens || isLocalLoading ? (
           'Loading...'
@@ -241,6 +243,7 @@ export const ActiveLandsSidebarView = () => {
   return (
     <div>
       <LandsSidebarHeaderWrapper isMobile={isMobile}>
+        <StatsBar />
         <ActiveLandsFirstLine withRevshare={isRevShareAvailable}>
           <ActiveLandsControlWrapper>
             <ActiveLandsTitle>{title}</ActiveLandsTitle>

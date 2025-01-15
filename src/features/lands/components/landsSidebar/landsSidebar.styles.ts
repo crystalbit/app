@@ -15,7 +15,7 @@ const LandsSidebarWrapper = styled.div<{
   flex-direction: column;
   position: fixed;
   height: 100vh;
-  padding: 40px 16px 40px 8px;
+  padding: 20px 16px 40px 8px;
   z-index: 10;
   transition: all 0.3s;
   box-sizing: border-box;
@@ -42,7 +42,7 @@ const LandsSidebarWrapper = styled.div<{
       ? css`
           left: 0;
           width: 100vw;
-          padding: 60px 16px 20px;
+          padding: 20px 16px 20px;
         `
       : css``;
 
@@ -72,8 +72,9 @@ const LandsSidebarHeaderWrapper = styled.header<{ isMobile?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: ${WHITE};
+  padding-top: 0;
   ${({ isMobile }) => {
     if (isMobile) {
       return css`

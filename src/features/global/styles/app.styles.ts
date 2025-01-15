@@ -391,6 +391,84 @@ const MobileTableWalletBlock = styled.div`
   align-items: center;
 `;
 
+const StatsBarWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  width: calc(100% - 32px);
+  max-width: 460px;
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+
+  @media screen and (max-width: 480px) {
+    width: calc(100% - 16px);
+    padding: 12px;
+    gap: 12px;
+  }
+`;
+
+const StatsItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-family: 'Play', sans-serif;
+  min-width: 120px;
+  justify-content: center;
+
+  &:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  &:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  @media screen and (max-width: 480px) {
+    min-width: 100px;
+  }
+`;
+
+const StatsIcon = styled.div`
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+`;
+
+const StatsText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+`;
+
+const StatsValue = styled.span`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const StatsLabel = styled.span`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
 export {
   BlockButton,
   commonFlexColumn,
@@ -419,5 +497,11 @@ export {
   NewHeaderStatWrapper,
   NoAddressChangeWrapper,
   ParagraphQuests,
-  TokensWrapper
+  TokensWrapper,
+  StatsBarWrapper,
+  StatsItem,
+  StatsIcon,
+  StatsText,
+  StatsValue,
+  StatsLabel
 };

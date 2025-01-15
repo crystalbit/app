@@ -79,8 +79,9 @@ const MyAccountIconWrapper = styled.div<{
 
 const CartCloseIconWrapper = styled.div`
   position: absolute;
-  top: 15px;
-  right: 12px;
+  top: 20px;
+  right: 16px;
+  cursor: pointer;
 `;
 
 const CartIconCounter = styled.div`
