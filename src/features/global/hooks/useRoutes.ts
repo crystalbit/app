@@ -5,11 +5,12 @@ const useNavigationRoutes = () => {
   const navigate = useNavigate();
 
   const isProfilePage = location.pathname.includes('/profile');
-  const isLandsPage = location.pathname.includes('/lands');
+  const isLandsPage =
+    location.pathname === '/' || location.pathname.includes('/lands');
   const isGamePage = location.pathname.includes('/game');
   const isPlayPage = location.pathname.includes('/play');
   const isMissionsPage = location.pathname.includes('/missions');
-  const isWelcomePage = location.pathname.includes('/');
+  const isWelcomePage = location.pathname === '/';
   const isFarmingPage = location.pathname === '/space-xchange';
   const isQuestPage = location.pathname.includes('/missions');
   const isRefPage = location.pathname.includes('/referral');

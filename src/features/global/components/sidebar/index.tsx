@@ -152,12 +152,16 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
     return [
       {
         route: '/',
-        icon: HomeIcon,
+        onClick: () => {
+          dispatch(toggleMyLandPopup('lands'));
+          return navigate('/lands');
+        },
+        icon: LandsIcon,
         isActive: true,
         withCounter: false,
         count: 0,
-        name: SIDEBAR_ROUTES_NAMES.home,
-        trackEvent: 'Home page clicked'
+        name: SIDEBAR_ROUTES_NAMES.lands,
+        trackEvent: 'Lands page clicked'
       },
       // {
       //   route: '/profile/',
@@ -170,23 +174,6 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
       //   count: 0,
       //   name: SIDEBAR_ROUTES_NAMES.profile
       // },
-      {
-        route: '/lands',
-        onClick: () => {
-          if (!isLandsPage) {
-            dispatch(toggleMyLandPopup('lands'));
-            return navigate('/lands');
-          }
-          dispatch(toggleMyLandPopup('lands'));
-          setIsOpen(false);
-        },
-        icon: LandsIcon,
-        isActive: true,
-        withCounter: false,
-        count: 0,
-        name: SIDEBAR_ROUTES_NAMES.lands,
-        trackEvent: 'Lands page clicked'
-      },
       // {
       //   route: '/play/',
       //   onClick: () => {
@@ -207,7 +194,7 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
         count: 0,
         name: SIDEBAR_ROUTES_NAMES.aiTrade,
         trackEvent: 'DEX page clicked (harmony only)'
-      },
+      }
       // {
       //   route: '/governance',
       //   icon: GovernanceIcon,
@@ -224,15 +211,15 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
       //   },
       //   trackEvent: 'Governance page clicked'
       // },
-      {
-        route: '/referral',
-        icon: ReferralIcon,
-        isActive: isRefPageAvailable,
-        withCounter: false,
-        count: 0,
-        name: SIDEBAR_ROUTES_NAMES.referral,
-        trackEvent: 'Referral page clicked'
-      }
+      // {
+      //   route: '/referral',
+      //   icon: ReferralIcon,
+      //   isActive: isRefPageAvailable,
+      //   withCounter: false,
+      //   count: 0,
+      //   name: SIDEBAR_ROUTES_NAMES.referral,
+      //   trackEvent: 'Referral page clicked'
+      // },
       // {
       //   route: '/market',
       //   icon: MarketIcon,

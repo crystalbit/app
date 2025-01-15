@@ -19,7 +19,7 @@ import ROUTES from '@root/router/routes';
 
 const generateRoutes = (flags: Record<string, boolean>) => {
   const routes = [
-    { route: ROUTES.root, element: <WelcomePage /> },
+    { route: ROUTES.root, element: <MapPage /> },
     { route: ROUTES.lands, element: <MapPage /> },
     { route: ROUTES.mining, element: <MiningMission /> }
   ];
