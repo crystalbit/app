@@ -4,7 +4,7 @@ class PolygonBackend {
   static getLandStats = async () => {
     try {
       const rawResponse = await fetch(
-        'https://meta-polygon.marscolony.io/metrics',
+        `${NETWORK_DATA.LAND_META_SERVER}metrics`,
         {
           method: 'GET',
           headers: {

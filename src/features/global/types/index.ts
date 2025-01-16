@@ -76,7 +76,7 @@ export enum SIDEBAR_ROUTES_NAMES {
   profile = 'Profile',
   play = 'Play',
   missions = 'Missions',
-  aiTrade = 'AI Trade',
+  aiTrade = 'Buy on DEX',
   market = 'Market',
   governance = 'Governance',
   referral = 'Referral',

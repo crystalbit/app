@@ -50,12 +50,14 @@ export const LINKS = {
     colonyGuide: 'https://guide.marscolony.io/get-started/what-is-mars-colony',
     nftKey: 'https://nftkey.app/collections/martiancolonists/',
     lands: 'https://nftkey.app/collections/marscolony/',
-    governance: 'https://snapshot.org/#/xclny.eth'
+    governance: 'https://snapshot.org/#/xclny.eth',
+    dex: 'https://dex.marscolony.io/'
   },
   polygon: {
     colonyGuide: 'https://guide.marscolony.io/get-started/what-is-mars-colony',
     nftKey: 'https://nftkey.app/collections/martiancolonists/',
-    governance: 'https://snapshot.org/#/marscolonyio.eth'
+    governance: 'https://snapshot.org/#/marscolonyio.eth',
+    dex: 'https://dex.marscolony.io/'
   }
 };
 

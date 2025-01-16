@@ -193,7 +193,14 @@ const Sidebar = ({ isMobile }: { isMobile: boolean }) => {
         withCounter: false,
         count: 0,
         name: SIDEBAR_ROUTES_NAMES.aiTrade,
-        trackEvent: 'DEX page clicked (harmony only)'
+        trackEvent: 'DEX page clicked (harmony only)',
+        onClick: () => {
+          if (isHarmonyChains) {
+            window.open(LINKS.harmony.dex, '_blank');
+          } else {
+            window.open(LINKS.polygon.dex, '_blank');
+          }
+        }
       }
       // {
       //   route: '/governance',

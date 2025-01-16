@@ -146,7 +146,7 @@ export const CartContent = ({ itemsCount }: { itemsCount: number }) => {
             {finalPrice === '...'
               ? finalPrice
               : parseFloat(finalPrice ?? '0')?.toFixed(1)}{' '}
-            MATIC
+            ETH
           </span>
         </SubtotalTitle>
         <CommonButton

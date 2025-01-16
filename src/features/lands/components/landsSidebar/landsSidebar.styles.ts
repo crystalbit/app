@@ -8,7 +8,7 @@ const LandsSidebarWrapper = styled.div<{
   isVisible?: boolean;
   isMobile?: boolean;
 }>`
-  background: ${RGB_BLACK};
+  // background: ${RGB_BLACK};
   backdrop-filter: blur(10px);
   width: 508px;
   display: flex;

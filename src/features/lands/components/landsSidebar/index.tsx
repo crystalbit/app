@@ -6,6 +6,7 @@ import ToggleSwitch from '@features/global/components/toggler/toggleButton';
 import { freeReserve } from '@features/globus/utils/reserveHelper';
 import { LandPlot } from '@features/lands/components/land/LandPlot';
 import { CartContent } from '@features/lands/components/landsSidebar/cartContent/cartContent';
+import SocialIconsBar from './SocialIconsBar';
 import useLands from '@features/lands/hooks/useLands';
 import { FlexedPlotDivider } from '@features/lands/styles/landPlot.styles';
 import {
@@ -144,7 +145,9 @@ export const NoLandsSidebarView = () => {
 
   return (
     <LandsSidebarHeaderWrapper>
+      <SocialIconsBar />
       <StatsBar />
+
       <NoLandsTitle>
         {isLoadingTokens || isLocalLoading ? (
           'Loading...'
@@ -243,6 +246,7 @@ export const ActiveLandsSidebarView = () => {
   return (
     <div>
       <LandsSidebarHeaderWrapper isMobile={isMobile}>
+        <SocialIconsBar />
         <StatsBar />
         <ActiveLandsFirstLine withRevshare={isRevShareAvailable}>
           <ActiveLandsControlWrapper>

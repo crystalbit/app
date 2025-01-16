@@ -354,7 +354,7 @@ export const contracts: Record<
     DEFAULT_ACCOUNT_STATE: 'lands',
     AVATARS: false,
     MISSIONS: false,
-    DEX: false,
+    DEX: true,
     TWITTER: false,
     PROFILE: false,
     LOOTBOXES: false,

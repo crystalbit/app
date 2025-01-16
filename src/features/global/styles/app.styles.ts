@@ -394,14 +394,12 @@ const MobileTableWalletBlock = styled.div`
 const StatsBarWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.6);
+  gap: 14px;
+  padding: 5px 0 10px 0;
   backdrop-filter: blur(10px);
   width: calc(100% - 32px);
   max-width: 460px;
   box-sizing: border-box;
-  margin: 0 auto 20px;
 
   @media screen and (max-width: 480px) {
     width: calc(100% - 16px);
