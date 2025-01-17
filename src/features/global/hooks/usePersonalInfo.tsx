@@ -20,7 +20,7 @@ import {
   trackGoogleAnalyticsEvent,
   trackUserEvent
 } from '@global/utils/analytics';
-import { providerOptions } from '@global/utils/cryptoHelpers';
+import { getProviderOptions } from '@global/utils/cryptoHelpers';
 import { extractURLParam } from '@global/utils/urlParams';
 import { wrongChainToast } from '@global/utils/utilModals';
 import {
@@ -52,16 +52,64 @@ import { setChambersState } from '@slices/cryochambersSlice';
 import Web3 from 'web3';
 import Web3Modal from 'web3modal';
 
-const web3Modal = new Web3Modal({
-  cacheProvider: true,
-  providerOptions,
-  theme: 'dark'
-});
+declare global {
+  interface Window {
+    isZerion?: boolean;
+  }
+}
 
 const usePersonalInfo = (withInitialize = false) => {
   // REFS
   const web3 = React.useRef<Web3 | null>(null);
   const addressRef = React.useRef<string>('');
+  const web3ModalRef = React.useRef<Web3Modal | null>(null);
+
+  // Initialize web3Modal
+  useEffect(() => {
+    const initializeWeb3Modal = (isZerion: boolean) => {
+      console.log('initializeWeb3Modal isZerion', isZerion);
+
+      web3ModalRef.current = new Web3Modal({
+        cacheProvider: true,
+        providerOptions: getProviderOptions(isZerion),
+        theme: 'dark'
+      });
+    };
+
+    // Initial initialization
+    initializeWeb3Modal(!!window.isZerion);
+
+    // Listen for provider announcements
+    const handleProviderAnnouncement = (event: any) => {
+      console.log('Provider announcement received, reinitializing Web3Modal');
+
+      console.log('event.detail.info.name', event.detail.info.name);
+      if (event.detail.info.name === 'Zerion') {
+        window.isZerion = true;
+      }
+
+      console.log(
+        'BEFORE initializeWeb3Modal, window.isZerion',
+        window.isZerion
+      );
+
+      initializeWeb3Modal(!!window.isZerion);
+    };
+
+    window.addEventListener(
+      'eip6963:announceProvider',
+      handleProviderAnnouncement
+    );
+    // Request providers
+    window.dispatchEvent(new Event('eip6963:requestProvider'));
+
+    return () => {
+      window.removeEventListener(
+        'eip6963:announceProvider',
+        handleProviderAnnouncement
+      );
+    };
+  }, []);
 
   // SELECTORS
   const connecting = useSelector(isConnecting);
@@ -92,7 +140,7 @@ const usePersonalInfo = (withInitialize = false) => {
   const disconnect = (window.disconnect = React.useCallback(
     async (event: React.MouseEvent<HTMLElement> | null = null) => {
       event?.preventDefault?.();
-      web3Modal.clearCachedProvider();
+      web3ModalRef.current?.clearCachedProvider();
       window.xweb3 = web3.current = null;
       addressRef.current = '';
       dispatch(resetUserBalance());
@@ -133,9 +181,9 @@ const usePersonalInfo = (withInitialize = false) => {
 
       try {
         if (to !== '') {
-          provider = await web3Modal.connectTo(to);
+          provider = await web3ModalRef.current?.connectTo(to);
         } else {
-          provider = await web3Modal.connect();
+          provider = await web3ModalRef.current?.connect();
         }
 
         trackUserEvent(
@@ -348,7 +396,11 @@ const usePersonalInfo = (withInitialize = false) => {
 
   React.useEffect(() => {
     (async () => {
-      if (web3Modal.cachedProvider && !isInitialized && withInitialize) {
+      if (
+        web3ModalRef.current?.cachedProvider &&
+        !isInitialized &&
+        withInitialize
+      ) {
         await connect();
       }
     })();
