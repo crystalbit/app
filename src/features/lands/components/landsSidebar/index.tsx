@@ -160,7 +160,7 @@ export const NoLandsSidebarView = () => {
       {(isLoadingTokens || isLocalLoading) && <Loader />}
       {!isLoadingTokens && !isLocalLoading && (
         <>
-          <Button onClick={onBuyLandClick} text="Buy land" variant="common" />
+          <Button onClick={onBuyLandClick} text="Claim land" variant="common" />
           <ButtonSubText>
             {NETWORK_DATA.ECONOMY === 'fixed'
               ? 'Earn up to 14 CLNY/day from a land'
